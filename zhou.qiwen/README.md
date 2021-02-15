@@ -1,8 +1,8 @@
-# Hamilton Cline
+# Qiwen Zhou
 
 ## Animal Tracker
 
 ### Important Links
 
-- https://hdraws.com
-- https://hdraws.com/aau/wnm617/cline.hamilton
+- http://zhouqiwen.com
+- http://zhouqiwen.com/aau/wnm617/zhou.qiwen
