@@ -1,0 +1,97 @@
+/* css reset */
+
+*, *::before, *::after {
+	box-sizing:border-box;
+}
+
+:root { 
+	--color-neutral-light:#B5CAA0;
+	--color-neutral-dark:#26453D;
+ }
+
+body {
+	margin: 0;
+	font-size: 100%;
+    background-color: #26453D;
+    font-weight: lighter;
+ }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: #CB1B45;
+	margin: 0 0;
+}
+
+a { 
+		color: #FEDFE1;
+		text-decoration: none;
+		font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+
+}
+
+ 
+/* Container */
+
+.wrapper {
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/* Navbar */
+.nav ul {
+	list-style: none;
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0em; 
+	margin-left: 20px;
+	font-size: 18px;
+	display: flex;
+	
+}
+ .nav a {
+		display: block;
+		padding: 0.2em 0.5em;
+	}
+
+	
+
+.navbar {
+	background-color: var(--color-neutral-dark);
+}
+.navbar h1 {
+	font-family: Helvetica, Arial, sans-serif;
+	margin: 0;
+}
+
+.navbar { 
+	padding: 0 0.5em;
+}
+
+
+
+li {
+	color: #FEDFE1;
+	text-decoration: none;
+}
+
+p {
+	width: 35%;
+	color: #B5CAA0;
+}
+
+
+
+
+@media (max-width: 600px) { 
+
+ }
