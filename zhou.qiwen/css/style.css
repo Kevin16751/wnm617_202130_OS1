@@ -1,0 +1,79 @@
+/* CSS RESET */
+
+*, *::after, *::before {
+	box-sizing: border-box;
+}
+
+:root {
+	--font-sans:Helvetica, Arial, sans-serif;
+	--font-sans:Cambria, Georgia, serif;
+}
+
+
+
+body {
+	margin: 0;
+	font-size: 100%;
+	font-family:var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family:var(--font-sans);
+}
+
+a {
+	color:inherit;
+	text-decoration: none;
+	font-weight: bold;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+
+
+/* LAYOUT CLASSES */
+.container {
+	max-width: 1000px;
+	margin-right: auto;
+	margin-left: auto;
+
+}
+
+hidden { display: none; }
+
+.display-flex {display:flex; }
+.display-block {display:block; }
+.display-inline-flex {display:inline-flex; }
+.display-inline-block {display:inline-block; }
+
+.flex-strech { flex:1 1 auto; }
+.flex-none { flex:1 1 auto; }
+
+.flex-align-center { align-items: center; }
+.flex-justify-center {  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
