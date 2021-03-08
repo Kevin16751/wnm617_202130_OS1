@@ -17,76 +17,109 @@
 </head>	
 <body>
 
-	<section data-role="page" id="signin-page">
-		<div data-role="main">
-			<form id="signin-form">
-				<input type="text" name="signin-username">		
-				<input type="password" name="signin-password">
-				<div>
-					<a href="#recent-page">Sign In</a>
-				</div>
-				
-			</form>
-		</div>
-	</section>
+<!-- SIGN IN PAGE -->
+   <section data-role="page" id="signin-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <div class="flex-none">
+            <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+               <div class="form-control">
+                  <label for="signin-username" class="form-label">Username</label>
+                  <input class="form-input" type="text" id="signin-username" data-role="none">
+               </div>
+               <div class="form-control">
+                  <label for="signin-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signin-password" data-role="none">
+               </div>
+               <div class="form-control">
+		            <label> Remember me
+		               <input type="checkbox">
+		            </label>
+               </div>
+               <div class="form-control">
+                  <a href="#recent-page" class="form-button">Sign In</a>
+               </div>
+            </form>
+         </div>
+      </div>
+   </section>
 
+<!-- HOME PAGE -->
+   <section data-role="page" id="recent-page">
+      <div data-role="main">
+         MAP!
+      </div>
+      <footer data-role="footer">
+         <a href="#recent-page">Recent</a>
+         <a href="#list-page">List</a>
+         <a href="#user-profile-page">Profile</a>
+      </footer>
+   </section>
 
-	<section data-role="page" id="recent-page">
-		<div data-role="main">
-			MAP!
-		</div>
-		<footer data-role="footer">
-			<a href="#recent-page">Recent</a>
-			<a href="#list-page">List</a>
-			<a href="user-profile-page">Profile</a>
-		</footer>
-	</section>
+<!-- LIST PAGE -->
+   <section data-role="page" id="list-page">
+      <header data-role="header">
+         <h1>Search</h1>
+      </header>
+      <div data-role="main">
+         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
+         <ul>
+            <li><a href="#animal-profile-page">Animal 1</a></li>
+            <li><a href="#animal-profile-page">Animal 2</a></li>
+            <li><a href="#animal-profile-page">Animal 3</a></li>
+            <li><a href="#animal-profile-page">Animal 4</a></li>
+            <li><a href="#animal-profile-page">Animal 5</a></li>
+            <li><a href="#animal-profile-page">Animal 6</a></li>
+            <li><a href="#animal-profile-page">Animal 7</a></li>
+            <li><a href="#animal-profile-page">Animal 8</a></li>
+            <li><a href="#animal-profile-page">Animal 9</a></li>
+            <li><a href="#animal-profile-page">Animal 10</a></li>
+         </ul>
+      </div>
+      <footer data-role="footer">
+         <a href="#recent-page">Recent</a>
+         <a href="#list-page">List</a>
+         <a href="#user-profile-page">Profile</a>
+      </footer>
+   </section>
 
-	<section data-role="page" id="list-page">
-		<head data-role="header">
-			<h1>Search</h1>
-		</head>
-		<div data-role="main">
-			<ul>
-				<li><a href="#animal-profile-page">Animal1</a></li>
-				<li><a href="#animal-profile-page">Animal2</a></li>
-				<li><a href="#animal-profile-page">Animal3</a></li>
-				<li><a href="#animal-profile-page">Animal4</a></li>
-				<li><a href="#animal-profile-page">Animal5</a></li>
-				<li><a href="#animal-profile-page">Animal6</a></li>
-				<li><a href="#animal-profile-page">Animal7</a></li>
-				<li><a href="#animal-profile-page">Animal8</a></li>
-				<li><a href="#animal-profile-page">Animal9</a></li>
-				<li><a href="#animal-profile-page">Animal10</a></li>
-			</ul>
-		</div>
-		<footer data-role="footer">
-			<a href="#recent-page">Recent</a>
-			<a href="#list-page">List</a>
-			<a href="user-profile-page">Profile</a>
-		</footer>
-	</section>
+<!-- USER PROFILE PAGE -->
+   <section data-role="page" id="user-profile-page">
+      <div data-role="main">
+         Profile
+         <p>
+            <a href="#signin-page">Sign Out</a>
+         </p>
+      </div>
+      <footer data-role="footer">
+         <a href="#recent-page">Recent</a>
+         <a href="#list-page">List</a>
+         <a href="#user-profile-page">Profile</a>
+      </footer>
+   </section>
 
-	<section data-role="page" id="user-profile-page">
-		<div data-role="main">
-			Profile
-		</div>
-		<footer data-role="footer">
-			<a href="#recent-page">Recent</a>
-			<a href="#list-page">List</a>
-			<a href="user-profile-page">Profile</a>
-		</footer>
-	</section>
+<!-- ANIMAL PROFILE PAGE -->
+   <section data-role="page" id="animal-profile-page">
+      <header data-role="header">
+         <h1>Search</h1>
+         <a href="#list-page" data-rel="back">Back</a>
+         <a href="#animal-editing-page">Edit</a>
+      </header>
+      <div data-role="main">
+         Animal Profile
+      </div>
+   </section>
 
-	<section data-role="page" id="animal-profile-page">
-		<header data-role="header">
-			<h1>Search</h1>
-			<a href="#" data-rel="back">Back</a>
-		</header>
-		<div data-role="main">
-			Animal Profile
-		</div>
-	</section>
-
+<!-- ANIMAL EDITING PAGE -->
+   <section data-role="page" id="animal-editing-page">
+      <header data-role="header">
+         <h1>Editing</h1>
+         <a href="#animal-profile-page" data-rel="back">Back</a>
+         <a href="#animal-profile-page">Save</a>
+      </header>
+      <div data-role="main">
+         Editing Animal Profile
+      </div>
+   </section>
 </body>
 </html>			
