@@ -53,6 +53,16 @@ h3 {
     font-kerning: none;
     border: none;
     padding-left: 0.5em
+
+}
+
+h4 {
+    font-size: 1.2em;
+    font-weight: normal;
+    width: 80%;
+    margin: 2.5em;
+    padding: 0;
+    
 }
 
 
@@ -104,11 +114,36 @@ h3 {
 
 img {
   width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.column {
+  float: left;
+  width: 40%;
+  padding: 5px;
 }
 
 ul {
   padding: 0 0.5em 0 0.5em;
 }
+
+
+
+
+/*view-window*/
+.view-window{
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-position:center;
+  background-attachment: fixed;
+
+  height: 35vh;
+}
+
+
+
 
 /* PAGE ELEMENTS */
 [data-role="page"].ui-page-active {
