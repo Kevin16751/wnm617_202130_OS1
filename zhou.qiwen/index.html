@@ -24,25 +24,79 @@
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
+
+            <div id="signin-page-logo"><img src="img/logo_617.png" alt=""></div>
+            <div id="signin-page-logo02"><img src="img/logo02_617.png" alt=""></div>
+
+            <div class="flex-none">
+               <h2 id="signin-welcome">Join Us!</h2>
+                  <h4 id="signin-sentence">For every bird lover.</h4>
+                  <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+
+                     <div class="form-control">
+                        <label for="signin-username" class="form-label">Username</label>
+                        <input class="form-input" type="text" id="signin-username" data-role="none">
+                     </div>
+                     <div class="form-control">
+                        <label for="signin-password" class="form-label">Password</label>
+                        <input class="form-input" type="password" id="signin-password" data-role="none">
+                     </div>
+                     <div class="form-control">
+      		            <label> Remember me
+      		               <input type="checkbox">
+      		            </label>
+                     </div>
+                     <div class="form-control">
+                        <input type="submit" class="form-button" value="Sign In" data-role="none">
+                     </div>
+                  </form>
+               <div class="sign-up-link">
+                  <a href="#signup-page">Don't have an account? <span style="color: #61C195">Sign Up</span></a>
+               </div>
+
+         </div>
+      </div>
+   </section>
+
+
+
+
+<!-- Sign Up Page -->
+   <section data-role="page" id="signup-page">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="signup-img">
+            
+         
+         <div class="flex-stretch"></div>
          <div class="flex-none">
-            <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+            <form class="form" id="signup-form" data-ajax="false" style="padding:25em 1em 1em 1em">
+
                <div class="form-control">
-                  <label for="signin-username" class="form-label">Username</label>
-                  <input class="form-input" type="text" id="signin-username" data-role="none">
+                  <label for="signup-username" class="form-label">Username</label>
+                  <input class="form-input" type="text" id="signup-username" data-role="none">
                </div>
+
                <div class="form-control">
-                  <label for="signin-password" class="form-label">Password</label>
-                  <input class="form-input" type="password" id="signin-password" data-role="none">
+                  <label for="email-address" class="form-label">Email Address</label>
+                  <input class="form-input" type="text" id="email-address" data-role="none">
                </div>
+
                <div class="form-control">
-		            <label> Remember me
-		               <input type="checkbox">
-		            </label>
+                  <label for="signup-password" class="form-label">Password</label>
+                  <input class="form-input" type="password" id="signup-password" data-role="none">
                </div>
+
+                <div class="form-control">
+                  <label for="confirm-signup-password" class="form-label">Confirm Password</label>
+                  <input class="form-input" type="password" id="confirm-signup-password" data-role="none">
+               </div>
+
                <div class="form-control">
-                  <input type="submit" class="form-button" value="Sign In" data-role="none">
+                  <input type="submit" class="form-button" value="Sign Up" data-role="none">
                </div>
+
             </form>
+         </div>
          </div>
       </div>
    </section>
@@ -64,7 +118,7 @@
 
    <section data-role="page" id="list-page">
       <header data-role="header">
-         <h1>List</h1>
+         <h1>Discover</h1>
          <ul>
             <li class="flex-stretch"></li>
             <li><a href="#animal-editing-page" class="js-list-add-animal" data-activate="#list-add-modal">&plus;</a></li>
@@ -72,16 +126,20 @@
       </header>
       <div data-role="main"><div class="overscroll">
          <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         <h3>Sea Gull</h3>
+         
          <ul>
+         <h2>Seagull</h2>
+         <h4>I met you for the first time on The Ocean Beach Park.</h4>
+            <li data-template="#animal-link-template"><img src="img/seagull01.jpeg" alt=""></li>
+            <li data-template="#animal-link-template"><img src="img/seagull02.jpeg" alt=""></li>
+         <h2>Pigeon</h2>
+         <h4>The first time I saw a lot of pigeons was when I first arrived in downtown San Francisco to study.</h4>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
-         <h3>Tern</h3>
             <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
+         <h2>Hummingbird</h2>
+         <h4>I met you for the first time on a date with my girlfriend.</h4>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
             <li data-template="#animal-link-template"></li>
@@ -129,24 +187,65 @@
 <!-- USER PROFILE PAGE -->
 
    <section data-role="page" id="user-profile-page">
-      <div data-role="main">
-         Profile
-         <p>
-            <a href="#" class="js-logout">Sign Out</a>
-         </p>
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="user-top">
+
+            <div class="avatar-test">
+            <img src="img/icon/profile bg.svg" alt="">
+         </div>
+         <div id="user-name-city">
+            <h2 id="user-name">Kevin Bird</h2>
+            <h4 id="user-city">San Francisco</h4>
+         </div>
+         <div class="preference">
+            <ul class="display-flex">
+               <li>Birds</li>
+               <span>7</span>
+               <li>Years</li>
+               <span>3</span>
+               <li>Liked</li>
+               <span>13</span>
+            </ul>
+         </div>
+
+         <hr class="profile-line">
+            
+         </div>
+         <div class="user-bottom">
+            <h3>Recently Viewed</h3>
+            <div class="overscroll">
+            <a href="#animal-profile-page"><img src="img/bird.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird01.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird02.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird03.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird01.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird02.jpeg" alt=""></a>
+            <a href="#animal-profile-page"><img src="img/bird03.jpeg" alt=""></a>
+            </div>
+            
+         </div>
+
+         
 
          <div class="floater top right">
             <a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/icon/shishkabob.svg" alt=""></a>
          </div>
 
+         
+
          <div class="modal" id="user-settings-modal">
             <div class="modal-drawer right">
                <div class="modal-head display-flex">
-                  <div class="flex-none">Head</div>
+                  <div class="flex-none">Setting</div>
                   <div class="flex-stretch"></div>
                   <div class="flex-none"><a href="#"data-deactivate="#user-settings-modal">&times;</a></div>
                </div>
                <div class="modal-body"><div class="overscroll">
+                  <p>
+                     <a href="#" class="js-logout">Sign Out</a>
+                  </p>
+
                </div>
                </div>
             </div>
@@ -164,14 +263,16 @@
 
    <section data-role="page" id="animal-profile-page">
       <header data-role="header">
-         <h1>Search</h1>
+        
          <a href="#list-page" data-rel="back">Back</a>
          <a href="#animal-editing-page">Edit</a>
       </header>
       <div data-role="main"><div class="overscroll">
          <div class="view-window" style="background-image: url(img/bird.jpeg);"></div>
          <div class="soft card">
-            <h3>Sea Gull</h3>
+            <h1>Sea Gull</h1>
+            <h5>Time:</h5>
+            <h5>Location:</h5>
          </div>
          <div class="view-window" style="background-image: url(img/bird01.jpeg);"></div>
          <div>
@@ -201,35 +302,34 @@
    <section data-role="page" id="animal-editing-page">
       <header data-role="header">
          <h1>Editing</h1>
-         <a href="#animal-profile-page" data-rel="back">Back</a>
-         <a href="#animal-profile-page">Save</a>
+         <a href="#animal-profile-page" data-rel="back">Cancel</a>
+         <a href="#animal-profile-page" data-rel="back">Save</a>
       </header>
 
-      <div data-role="main"><div class="overscroll">
+      <div data-role="main" class="display-flex flex-vertical"><div class="overscroll">
+         <div class="flex-stretch"></div>
+            <div class="column">
+               <img src="img/bird02.jpeg" alt="">
+            </div>
+        
+            <h3>Info</h3>
+            <div class="soft card" id="editing info">
+               <form>
+                  <input type="Name" placeholder="Name" class="form-input">
+                  <input type="Location" placeholder="Location" class="form-input">
+                  <input type="Date" placeholder="Date" class="form-input">
+               </form>
+            </div>
+            <h3>Intro</h3>
+            <div class="soft card">
+               <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Blanditiis autem unde similique fugiat, voluptatum officiis molestias quia maxime cum quisquam aut, impedit temporibus consequatur minima totam eligendi ducimus commodi tempora.</p>
+            </div>
 
-         <div class="column">
-            <img src="img/bird.jpeg" alt="">
-         </div>
-         <div class="column">
-            <img src="img/bird01.jpeg" alt="">
-         </div>
-         <div class="column">
-            <img src="img/bird02.jpeg" alt="">
-         </div>
-         <div class="column"> 
-            <img src="img/bird03.jpeg" alt="">
-         </div>
-
-         <h3>Info</h3>
-         <div class="soft card" id="editing info">
-            <form>
-               <input type="Name" placeholder="Name" class="form-input">
-               <input type="Location" placeholder="Location" class="form-input">
-               <input type="Date" placeholder="Date" class="form-input">
-               
-            </form>
-         </div>
-
+            <h3>Story</h3>
+            <div class="soft card">
+               <p>Lorem ipsum, dolor sit amet consectetur, adipisicing elit. Blanditiis autem unde similique fugiat, voluptatum officiis molestias quia maxime cum quisquam aut, impedit temporibus consequatur minima totam eligendi ducimus commodi tempora.</p>
+            </div>
+            
       </div></div>
 
          
@@ -252,10 +352,9 @@
 
    <script type="text/template" id="animal-link-template">
    <div class="card soft">
-      <a href="#animal-profile-page"><img src="img/bird.jpeg" alt="">Name: Bird</a>
-   
+      <a href="#animal-profile-page"><img src="img/bird.jpeg" alt="">Name:</a>
       <div>
-      <a href="#animal-profile-page">Location: Ocean Beach Park</a>
+      <a href="#animal-profile-page">Location:</a>
       </div>
    </div>
    </script>

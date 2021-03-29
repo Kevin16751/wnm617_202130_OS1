@@ -20,6 +20,9 @@
    --color-white:#fff;
    --color-black:#111;
 
+   --color-green:#61C195;
+   --color-black:#000000;
+
    --header-height:3rem;
 }
 
@@ -47,21 +50,57 @@ a:hover {
    text-decoration: underline;
 }
 
-/*body*/
-h3 {
+/* Body copy Specific*/
+h2 {
     margin-top: 1.5em;
+    margin-bottom: 0.4em;
     font-kerning: none;
     border: none;
-    padding-left: 0.5em
+    padding-left: 0.7em;
+    letter-spacing: 1.5px;
 
 }
-
+h3{
+    
+    letter-spacing: 1.5px;
+    font-weight: bolder;
+    margin-left: 1em;
+}
 h4 {
+    color: grey;
     font-size: 1.2em;
     font-weight: normal;
     width: 80%;
     margin: 2.5em;
+    margin-left: 1em;
+    margin-top: 0;
+    margin-bottom: 30px;
     padding: 0;
+    letter-spacing: 1px;
+}
+
+#signin-page-logo {
+    position: inherit;
+    width: 40%;
+    top: 73px;
+    margin-left: 9.5em;
+}
+
+#signin-page-logo02 {
+    width: 15%;
+    position: inherit;
+    margin-left: 5.5em;
+    top: -145px;
+}
+
+#signin-welcome h2 {
+  margin: 0;
+  padding: 16px;
+    
+}
+#signin-sentence h4 {
+  margin: 0;
+  padding: 16px;
     
 }
 
@@ -112,16 +151,21 @@ h4 {
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 
+
+
+
+
+
 img {
-  width: 95%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
 
 .column {
-  float: left;
-  width: 40%;
-  padding: 5px;
+    width: 105%;
+    padding: 5px;
+    float: none;
 }
 
 ul {
@@ -139,7 +183,7 @@ ul {
   background-position:center;
   background-attachment: fixed;
 
-  height: 35vh;
+  height: 75vh;
 }
 
 
@@ -213,9 +257,9 @@ ul {
 .form-button {
     margin: 0;
     padding: 0.5em 1em;
-    border-radius: 0.3em;
+    border-radius: 1em;
     border-width:0;
-    background-color:var(--color-neutral-light);
+    background-color:var(--color-black);
     outline: 0;
     width: 100%;
     display: inline-block;
@@ -226,6 +270,10 @@ ul {
 .form-button:hover {
    text-decoration:none;
    background-color:var(--color-neutral-medium);
+}
+
+input.form-button {
+  color: white;
 }
 
 
@@ -255,9 +303,10 @@ ul {
   flex: 1 1 auto;
  }
 
- [data-role="footer"] img { 
-  height: 6vh;
- }
+ [data-role="footer"] img {
+    height: 3em;
+    width: 3em;
+}
 
 [data-role="header"] li { 
   padding: 0 1em;
@@ -346,7 +395,7 @@ ul {
 
 .modal-head,
 .modal-foot {
-  background-color:var(--color-neutral-light);
+  background-color:#61C195;
   padding:0.5em 1em;
 }
 .modal-body {
@@ -404,15 +453,72 @@ ul {
 }
 
 
+/* Animal Profile page*/
+.animal-top {
 
+}
 
+.animal-bottom {
 
+}
 
+/*USER PROFILE PAGE*/
 
+.avatar-test {
+    display: block;
+    width: 42%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 7em;
+}
 
+#user-name-city {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 46%;
+    margin-top: -1.3em;
 
+}
+#user-name {
+  padding:0;
+}
+.preference {
+  text-decoration: none;
+  text-align: center;
+  font: inherit;
+  display: block;
+}
 
+.user-top { 
 
+}
+.user-bottom { 
+  flex: 1 1 100%;
+  position: relative;
+  overflow: hidden;
+}
 
+hr.profile-line {
+  border: 1px solid #e6e6e6;
+  width: 338px;
+}
+
+/*Sign In Page*/
+.sign-up-link { 
+  text-align: center;
+  margin-bottom: 4em;
+}
+
+/*sign up page*/
+.signup-img {
+  background-image: url("../img/icon/signup-img.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: -webkit-fill-available;
+}
 
 
