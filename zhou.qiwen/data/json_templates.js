@@ -16,7 +16,7 @@
     email: function() {
       return this.username + '@gmail.com';
     },
-    password: 'pass',
+    password: 'md5(pass)',
     img: function(tags) {
       return 'https://via.placeholder.com/400/'+tags.integer(700,900) + '/fff/?text=' + this.username;
     },
