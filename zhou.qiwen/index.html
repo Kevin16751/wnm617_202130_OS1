@@ -118,11 +118,11 @@
 <!-- HOME PAGE -->
 
    <section data-role="page" id="recent-page">
-
       <div data-role="main">
-         <form action="search"></form>
+         <div class="map"></div>
+         <div class="floater bottom right"></div>
+            <a href="#choose-animal-page" class="circle-button">&plus;</a>
       </div>
-      
       <footer data-role="footer" data-template="#footer-template"></footer>
    </section>
 
@@ -140,6 +140,7 @@
          </ul>
       </header>
       <div data-role="main"><div class="overscroll">
+         <div class="animallist"></div>
          <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
          
          <!-- <ul>
@@ -359,9 +360,18 @@
 
    <script type="text/template" id="footer-template">
    <ul>
-      <li><a href="#recent-page"><img src="img/icon/map.svg" alt=""></a></li>
-      <li><a href="#list-page"><img src="img/icon/list.svg" alt=""></a></li>
-      <li><a href="#user-profile-page"><img src="img/icon/profile.svg" alt=""></a></li>
+      <li><a href="#recent-page">
+         <span><img src="img/icon/map.svg" alt=""></span>
+         <span class="title">Recent</span>
+      </a></li>
+      <li><a href="#list-page">
+         <span><img src="img/icon/list.svg" alt=""></span>
+         <span class="title">List</span>
+      </a></li>
+      <li><a href="#user-profile-page">
+         <span><img src="img/icon/profile.svg" alt=""></span>
+         <span class="title">Profile</span>
+      </a></li>
    </ul>
    </script>
 

@@ -421,6 +421,21 @@ input.form-button {
 }
 
 
+.title-icons .title,
+.title-icons .icon {
+  display:block;
+}
+.title-icons .icon {
+  line-height:calc(var(--header-height)*(2/3));
+  font-size:1.5em;
+}
+.title-icons .title {
+  line-height:calc(var(--header-height)*(1/3));
+  font-size:0.7em;
+}
+
+
+
 
 
 /* FLOATERS */
@@ -440,25 +455,134 @@ input.form-button {
 
 
 
+.circle-button {
+  display:inline-block;
+  vertical-align:middle;
+  background-color:white;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+  border-radius:50%;
+  height:var(--header-height);
+  line-height:var(--header-height);
+  width:var(--header-height);
+  text-align:center;
+  font-size:2em;
+}
 
 
 
 /* remove this later */
-#recent-page [data-role='main'] {
-  background-image: url('../img/map.png');
+.map {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+
+/* ANIMAL PROFILE PAGE */
+.animal-top {
+  flex:none;
+  height:40vh;
   background-position:center;
   background-size:cover;
 }
-
-
-/* Animal Profile page*/
-.animal-top {
-
-}
-
 .animal-bottom {
-
+  flex:1 1 100%;
+  position:relative;
+  overflow:hidden;
 }
+.animal-bottom-section {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+.animal-nav {
+  text-align:center;
+}
+
+.animal-nav li {
+  position:relative;
+}
+.animal-nav .active::after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  height:3px;
+  background-color:var(--color-main-medium);
+}
+.animal-bottom-section {
+  display:none;
+}
+.animal-bottom-section.active {
+  display:block;
+}
+
+
+
+/*LIST PAGE*/
+.animallist {
+}
+.animallist-item {
+  font-weight:normal;
+  margin: 1em;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+.animallist-image img{
+  width:100px;
+  height:100px;
+  vertical-align: middle;
+}
+.animallist-description {
+  padding:1em;
+}
+.animallist-name {
+  font-size:1.3em;
+}
+
+
+.animallist {
+}
+.animallist-item {
+  font-weight:normal;
+  margin: 1em;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
+}
+.animallist-image img{
+  width:100px;
+  height:100px;
+  vertical-align: middle;
+}
+.animallist-description {
+  padding:1em;
+}
+.animallist-name {
+  font-size:1.3em;
+}
+
+
+
+
+
+
+.user-profile-image {
+  text-align: center;
+  padding: 2em;
+}
+.user-profile-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
 
 /*USER PROFILE PAGE*/
 
@@ -521,42 +645,4 @@ hr.profile-line {
 
 
 
-/*LIST PAGE*/
-.animallist {
-}
-.animallist-item {
-  font-weight:normal;
-  margin: 1em;
-  border-radius: 1em;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-}
-.animallist-image img{
-  width:100px;
-  height:100px;
-  vertical-align: middle;
-}
-.animallist-description {
-  padding:1em;
-}
-.animallist-name {
-  font-size:1.3em;
-}
 
-
-
-
-
-
-
-
-
-.user-profile-image {
-  text-align: center;
-  padding: 2em;
-}
-.user-profile-image img {
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-}
