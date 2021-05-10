@@ -175,8 +175,8 @@ ul {
 
 
 
-/*view-window*/
-.view-window{
+/*view-window__DOES NOT WORK ON MOBILE*/ 
+/*.view-window{
   position: relative;
   overflow: hidden;
   background-size: cover;
@@ -184,7 +184,7 @@ ul {
   background-attachment: fixed;
 
   height: 75vh;
-}
+}*/
 
 
 
@@ -198,7 +198,7 @@ ul {
    left: 0;
    width: 100%;
    height: 100%;
-   overflow: 100%;
+   overflow: hidden;
 }
 [data-role="main"] {
    flex: 1 1 100%;
@@ -279,14 +279,14 @@ input.form-button {
 
 
 /*Navigation Elements*/
-
+.header a,
 [data-role="footer"] a,
 [data-role="header"] a { 
   display: block;
   margin: 0;
-  padding: 0 1em;
  }
 
+.header ul,
 [data-role="footer"] ul,
 [data-role="header"] ul {
   list-style-type: none;
@@ -295,7 +295,6 @@ input.form-button {
   display: flex;
   position: relative;
 }
-
 [data-role="footer"] li { 
   text-align: center;
   flex: 1 1 auto;
@@ -306,9 +305,15 @@ input.form-button {
     width: 3em;
 }
 
-[data-role="header"] li { 
+[data-role="header"] a { 
   padding: 0 1em;
  }
+
+ .header {
+  width:100%;
+   height: var(--header-height);
+   line-height: var(--header-height);
+}
 
 
 
@@ -525,27 +530,6 @@ input.form-button {
 
 
 /*LIST PAGE*/
-.animallist {
-}
-.animallist-item {
-  font-weight:normal;
-  margin: 1em;
-  border-radius: 1em;
-  overflow: hidden;
-  box-shadow: 0 5px 10px rgb(0 0 0 / 20%);
-}
-.animallist-image img{
-  width:100px;
-  height:100px;
-  vertical-align: middle;
-}
-.animallist-description {
-  padding:1em;
-}
-.animallist-name {
-  font-size:1.3em;
-}
-
 
 .animallist {
 }
@@ -570,6 +554,22 @@ input.form-button {
 
 
 
+.animal-image-thumb img {
+  width:6em;
+  height:6em;
+  vertical-align: middle;
+}
+
+
+
+
+.animal-jump * {
+  pointer-events:none;
+}
+
+
+
+/*USER PROFILE PAGE*/
 
 
 
@@ -583,8 +583,6 @@ input.form-button {
   border-radius: 100%;
 }
 
-
-/*USER PROFILE PAGE*/
 
 .avatar-test {
     display: block;

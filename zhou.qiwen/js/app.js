@@ -17,7 +17,13 @@ $(()=>{
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
          case "user-profile-page": UserProfilePage(); break;
+         case "user-edit-page": UserEditPage(); break;
+         case "user-password-page": UserPasswordPage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
+         case "animal-edit-page": AnimalEditPage(); break;
+         case "animal-add-page": AnimalAddPage(); break;
+         case "choose-animal-page": ChooseAnimalPage(); break;
+         case "choose-location-page": ChooseLocationPage(); break;
       }
    })
 
