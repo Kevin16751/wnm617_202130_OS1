@@ -39,6 +39,10 @@ const RecentPage = async () => {
 
 
 
+
+
+
+
 const ListPage = async () => {
    let animals = await query({
       type:'animals_by_user_id',
@@ -47,12 +51,16 @@ const ListPage = async () => {
 
    console.log(animals)
 
-   animal_template = animals.result.length?
-      makeAnimalList(animals.result):
-      `<div class="animallist-item"><div class="animallist-description">No animals yet. Try adding some.</div></div>`
+   $(".filter-set").html(makeFilterList(animals.result))
 
-   $("#list-page .animallist").html(animal_template);
+   makeAnimalListSet(
+      animals.result,
+      "No animals yet. Try adding some."
+   );
 }
+
+
+
 
 
 
@@ -86,6 +94,22 @@ const UserPasswordPage = async () => {
    $("#user-password-form")
          .html(makeUserPasswordUpdateForm(user.result[0]));
 }
+
+const UserUploadPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-upload-image").val(user.result[0].img);
+   $(".image-uploader").css({
+      "background-image":`url(${user.result[0].img})`
+   });
+}
+
+
+
+
 
 
 
@@ -126,14 +150,49 @@ const AnimalEditPage = async () => {
    });
 
    $("#animal-edit-form")
-         .html(makeAnimalProfileUpdateForm(animal.result[0]));
+      .html(
+         makeAnimalProfileUpdateForm(animal.result[0])
+      );
+}
+
+const AnimalAddPage = async () => {
+
+   $("#animal-add-form .form-elements")
+      .html(
+         makeAnimalProfileUpdateForm({
+            name:"",
+            type:"",
+            breed:"",
+            description:""
+         },"animal-add")
+      );
 }
 
 
 
 
 
+const ChooseAnimalPage = async () => {
+   let d = await query({
+      type:'animals_by_user_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#location-choose-animal")
+      .html(FormSelectOptions(d.result))
+}
 const ChooseLocationPage = async () => {
    let map_el = await makeMap("#choose-location-page .map");
    makeMarkers(map_el,[])
+
+   map_el.data("map").addListener("click",function(e){
+      console.log(e)
+      $("#location-lat").val(e.latLng.lat())
+      $("#location-lng").val(e.latLng.lng())
+      makeMarkers(map_el,[{
+         lat:e.latLng.lat(),
+         lng:e.latLng.lng(),
+         // icon:
+      }])
+   })
 }
