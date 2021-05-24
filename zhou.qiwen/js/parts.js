@@ -20,6 +20,7 @@ const makeUserProfile = o => `
    </div>
 </div>
 <div class="user-profile-description">
+<br>
    <div class="user-profile-name">${o.name}</div>
    <div class="user-profile-email">${o.email}</div>
 </div>
@@ -33,6 +34,20 @@ const makeAnimalInfo = o => `
 <button class="form-button animal-delete" data-id="${o.id}">Delete</button>
 `;
 
+
+
+const makeAnimalPopup = o => `
+<div class="display-flex animal-jump" data-id="${o.animal_id?o.animal_id:o.id}">
+   <div class="flex-none animal-image-thumb">
+      <img src="${o.img}">
+   </div>
+   <div class="flex-none" style="padding:1em">
+      <div class="animal-name">${o.name}</div>
+      <div class="animal-type">${o.type}</div>
+      <div class="animal-breed">${o.breed}</div>
+   </div>
+</div>
+`;
 
 
 

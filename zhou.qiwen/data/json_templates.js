@@ -34,7 +34,17 @@
     
     name: '{{company()}}',
     
-    type: '{{random("gull","hummingbird","parrot")}}',
+    type: '{{random("gull","parrot","hummingbird")}}',
+    breed: function(tags) {
+      var breeds = {
+        gull:["labrador","pitbull","dachsund"],
+        parrot:["calico","ginger","tuxedo","siamese"],
+        hummingbird:["shetland","andalusian","unicorn"]
+      };
+      var chosen_type = breeds[this.type];
+      var chosen_index = tags.integer(0,chosen_type.length-1);
+      return chosen_type[chosen_index];
+    },
     
     description: '{{lorem(3,"sentences")}}',
     img:function(tags) {
@@ -42,7 +52,6 @@
         tags.integer(700,999) + '/fff/?text=' + this.name;
     },
     date_create: '{{date(new Date(2020, 0, 1), new Date(), "YYYY-MM-dd hh:mm:ss")}}'
-    
   }
 ]
 

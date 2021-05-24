@@ -6,17 +6,18 @@ const makeMap = async (target,center={lat: 37.735078,lng: -122.436844}) => {
 
    // map = map_el.data("map");
 
-   if(!map_el.data("map")) map_el.data(
-      "map",
-      new google.maps.Map(
+   if(!map_el.data("map")) map_el.data({
+      "map": new google.maps.Map(
          map_el[0],
          {
             center: center,
             zoom: 12,
-            disableDefaultUI: true
+            disableDefaultUI: true,
+            styles:mapStyles
          }
-      )
-   );
+      ),
+      "infoWindow": new google.maps.InfoWindow({content:''})
+   });
 
    return map_el;
 }
@@ -62,7 +63,7 @@ const setMapBounds = (map_el,map_locs) => {
          navigator.geolocation.getCurrentPosition(p=>{
             let pos = {
                lat:p.coords.latitude,
-               lat:p.coords.longitude
+               lng:p.coords.longitude
             };
             map.setCenter(pos);
             map.setZoom(zoom);

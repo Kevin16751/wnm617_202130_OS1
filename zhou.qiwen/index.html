@@ -5,6 +5,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Animal Tracker</title>
 
+    <link rel="apple-touch-icon" href="logo_icon.png">
+    <link rel="icon" href="logo_icon.png">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#52B28B">
+
     <link rel="stylesheet" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
     <link rel="stylesheet" href="css/app.css">
 
@@ -32,19 +38,14 @@
 
 
 <!-- SIGN IN PAGE -->
-
    <section data-role="page" id="signin-page">
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
+         <div class="flex-none">
+               <h2 id="signin-welcome">Birds Tracker</h2>
+                  
 
-            <div id="signin-page-logo"><img src="img/logo_617.png" alt=""></div>
-            <div id="signin-page-logo02"><img src="img/logo02_617.png" alt=""></div>
-
-            <div class="flex-none">
-               <h2 id="signin-welcome">Join Us!</h2>
-                  <h4 id="signin-sentence">For every bird lover.</h4>
                   <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
-
                      <div class="form-control">
                         <label for="signin-username" class="form-label">Username</label>
                         <input class="form-input" type="text" id="signin-username" data-role="none">
@@ -57,10 +58,9 @@
                         <input type="submit" class="form-button" value="Sign In" data-role="none">
                      </div>
                   </form>
-               <div class="form-control" style="text-align:center">
+                     <div class="form-control" style="text-align:center">
                   Don't have an account? <a href="#signup-page"><span style="color: #61C195">Sign Up</span></a>
-               </div>
-
+                     </div>
          </div>
       </div>
    </section>
@@ -155,7 +155,7 @@
 
 <!-- LIST PAGE -->
 
-   <section data-role="page" id="list-page">
+  <section data-role="page" id="list-page">
       <header data-role="header">
          <ul>
             <li class="flex-stretch" style="padding-left:0.5em">
@@ -171,33 +171,16 @@
       </header>
       <div data-role="main"><div class="overscroll">
          <div class="animallist"></div>
-         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         
-         <!-- <ul>
-         <h2>Seagull</h2>
-         <h4>I met you for the first time on The Ocean Beach Park.</h4>
-            <li data-template="#animal-link-template"><img src="img/seagull01.jpeg" alt=""></li>
-            <li data-template="#animal-link-template"><img src="img/seagull02.jpeg" alt=""></li>
-         <h2>Pigeon</h2>
-         <h4>The first time I saw a lot of pigeons was when I first arrived in downtown San Francisco to study.</h4>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-         <h2>Hummingbird</h2>
-         <h4>I met you for the first time on a date with my girlfriend.</h4>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-            <li data-template="#animal-link-template"></li>
-         </ul> -->
       </div></div>
       <footer data-role="footer" data-template="#footer-template"></footer>
 
 
+
+
+
+
       <!-- MODAL -->
-      <!-- <div class="modal" id="list-add-modal">
+      <div class="modal" id="list-add-modal">
          <div class="modal-back" data-deactivate="#list-add-modal"></div>
          <form class="modal-popup" data-ajax="false" id="list-add-form">
             <div class="modal-head">Head</div>
@@ -222,39 +205,8 @@
                </div>
             </div>
          </form>
-      </div> -->
+      </div> 
    </section>
-
-
-   <div class="modal" id="list-add-modal">
-         <div class="modal-back" data-deactivate="#list-add-modal"></div>
-         <form class="modal-popup" data-ajax="false" id="list-add-form">
-            <div class="modal-head">Head</div>
-            <div class="modal-body">
-               <div class="form-control">
-                  <label for="list-add-name" class="form-label">Name</label>
-                  <input class="form-input" type="text" id="list-add-name" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-type" class="form-label">Type</label>
-                  <input class="form-input" type="text" id="list-add-type" data-role="none">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-breed" class="form-label">Breed</label>
-                  <input class="form-input" type="text" id="list-add-breed" data-role="none">
-               </div>
-            </div>
-            <div class="modal-foot display-flex">
-               <div class="flex-stretch"></div>
-               <div class="flex-none">
-                  <a href="#" data-deactivate="#list-add-modal">Submit</a>
-               </div>
-            </div>
-         </form>
-      </div>
-   </section>
-
-
 
 
 
@@ -365,6 +317,12 @@
                   <li class="flex-stretch"></li>
                   <li class="flex-none do-touch"><a href="#animal-edit-page">Edit</a></li>
                </ul>
+            </div>
+            <div class="floater bottom right" style="font-size:1.5em">
+               <form class="icon" data-ajax="false" id="animal-update-image-form">
+                  <input type="file" id="animal-update-image-input" class="hidden" data-role="none">
+                  <label for="animal-update-image-input" style="margin:0"><img src="img/icon/pencil.svg" alt=""></label>
+               </form>
             </div>
          </div>
          <div class="header animal-nav">
@@ -539,17 +497,17 @@
 <!-- TEMPLATE Design-->
 
    <script type="text/template" id="footer-template">
-   <ul>
-      <li><a href="#recent-page">
-         <span><img src="img/icon/map.svg" alt=""></span>
+   <ul class="title-icons">
+      <li data-page-link="recent-page"><a href="#recent-page">
+         <span class="icon"><img src="img/icon/map.svg" alt=""></span>
          <span class="title">Recent</span>
       </a></li>
-      <li><a href="#list-page">
-         <span><img src="img/icon/list.svg" alt=""></span>
+      <li data-page-link="list-page"><a href="#list-page">
+         <span class="icon"><img src="img/icon/list.svg" alt=""></span>
          <span class="title">List</span>
       </a></li>
-      <li><a href="#user-profile-page">
-         <span><img src="img/icon/profile.svg" alt=""></span>
+      <li data-page-link="user-profile-page"><a href="#user-profile-page">
+         <span class="icon"><img src="img/icon/profile.svg" alt=""></span>
          <span class="title">Profile</span>
       </a></li>
    </ul>
